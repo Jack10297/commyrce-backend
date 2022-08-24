@@ -24,14 +24,6 @@ const loginUser = async (req, res) => {
 			const isMatch = await bcrypt.compare(password, doc.password);
 			if (isMatch) {
 				const token = jwt.sign({ username, password }, process.env.TOKEN_KEY, { expiresIn: "60m" });
-
-				
-				// await res.cookie('commyrce', token, {
-				// 	maxAge: 60000 * 30,
-				// 	httpOnly: true,
-				// 	//secure: process.env 
-				// });
-
 				
 				return res.status(200).json({
 					success: true,

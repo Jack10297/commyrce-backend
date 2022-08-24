@@ -37,7 +37,6 @@ const fetchDeals = async (req, res) => {
 			products
 		});
 	} catch (err) {
-		//console.log(err.message);
 		return res.json({
 			success: false,
 			msg: 'Something Went Wrong!'

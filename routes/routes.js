@@ -6,13 +6,9 @@ const fetchProducts = require('../controllers/fetchProducts');
 const fetchRandomProducts = require('../controllers/fetchRandomProducts');
 const fetchDeals = require('../controllers/fetchDeals');
 const mongoose = require('mongoose');
-const Product = require('../models/Product');
-const User = require('../models/User.js');
-const Admin = require('../models/Admin.js');
 const signInAdmin = require('../controllers/signInAdmin');
 const loginUser = require('../controllers/loginUser');
 const registerUser = require('../controllers/registerUser');
-const stripePay = require('../controllers/stripeRoute');
 const processCart = require('../controllers/processCart')
 
 
@@ -43,7 +39,7 @@ router.post('/login', loginUser);
 router.post('/register', registerUser);
 
 // For stripe payments
-router.post('/pay', stripePay);
+//router.post('/pay', stripePay);
 
 // Insert Product Route
 router.post('/insert', multerUpload.single('image'), insertProduct);

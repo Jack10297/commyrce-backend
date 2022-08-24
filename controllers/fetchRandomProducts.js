@@ -4,7 +4,6 @@ const Product = require('../models/Product')
 const fetchRandomProducts = async (req, res) => {
 	try {
 		const body = req.body;
-		//console.log("BODY: ", body)
 
 		if (body.noOfProducts && body.category) {
 			if (body.noOfProducts <= 0) {
@@ -26,8 +25,6 @@ const fetchRandomProducts = async (req, res) => {
 			res.end("No Product Fetched!");
 		}
 	
-		
-
 	}
 	catch (error) {
 		return res.json({
@@ -37,7 +34,6 @@ const fetchRandomProducts = async (req, res) => {
 		})
 	}
 	
-
 	return;
 }
 

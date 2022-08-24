@@ -26,8 +26,8 @@ const processCart = async (req, res) => {
 			}
 		}),
 		mode: 'payment',
-		success_url: 'http://localhost:3000/',
-		cancel_url: 'http://localhost:3000/products'
+		success_url: `${process.env.FRONTEND_ORIGIN}`,
+		cancel_url: `${process.env.FRONTEND_ORIGIN}/products`
 
 	})
 	
