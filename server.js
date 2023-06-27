@@ -2,7 +2,6 @@ require('dotenv').config
 const express = require('express'),
 	cors = require('cors'),
 	port = process.env.PORT || 3001,
-	uri = 'mongodb+srv://MirzasDB786:mughal2423@cluster1.ngbcq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
 	app = express(),
 	bodyParser = require('body-parser'),
 	mongoose = require('mongoose'),
